@@ -28,21 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.lblInstruction = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.imgCharacter = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCharacter)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(107, 124);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 0;
+            this.btnSubmit.Text = "Click Me";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblInstruction
+            // 
+            this.lblInstruction.AutoSize = true;
+            this.lblInstruction.Location = new System.Drawing.Point(388, 187);
+            this.lblInstruction.Name = "lblInstruction";
+            this.lblInstruction.Size = new System.Drawing.Size(180, 13);
+            this.lblInstruction.TabIndex = 1;
+            this.lblInstruction.Text = "Click on the Button or the Picturebox";
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(452, 254);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(37, 13);
+            this.lblStatus.TabIndex = 2;
+            this.lblStatus.Text = "Status";
+            // 
+            // imgCharacter
+            // 
+            this.imgCharacter.Image = ((System.Drawing.Image)(resources.GetObject("imgCharacter.Image")));
+            this.imgCharacter.Location = new System.Drawing.Point(164, 227);
+            this.imgCharacter.Name = "imgCharacter";
+            this.imgCharacter.Size = new System.Drawing.Size(100, 111);
+            this.imgCharacter.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCharacter.TabIndex = 3;
+            this.imgCharacter.TabStop = false;
+            this.imgCharacter.Visible = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.imgCharacter);
+            this.Controls.Add(this.lblStatus);
+            this.Controls.Add(this.lblInstruction);
+            this.Controls.Add(this.btnSubmit);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "MainForm";
             this.Text = "Controls, Events, and Properties";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.imgCharacter)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Label lblInstruction;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.PictureBox imgCharacter;
     }
 }
 
