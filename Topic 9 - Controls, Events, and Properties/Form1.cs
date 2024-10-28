@@ -17,11 +17,22 @@ namespace Topic_9___Controls__Events__and_Properties
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            imgCharacter.Visible = true;
+            lblStatus.Text = "Status: Clicked";
+            btnQuit.Enabled = true;
+            btnSubmit.Enabled = false;
         }
 
-        
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void imgCharacter_Click(object sender, EventArgs e)
+        {
+            imgCharacter.Visible = false;
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.lblInstruction = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.imgCharacter = new System.Windows.Forms.PictureBox();
+            this.btnQuit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgCharacter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +45,7 @@
             this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "Click Me";
             this.btnSubmit.UseVisualStyleBackColor = true;
-            this.btnSubmit.Click += new System.EventHandler(this.button1_Click);
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblInstruction
             // 
@@ -74,6 +75,18 @@
             this.imgCharacter.TabIndex = 3;
             this.imgCharacter.TabStop = false;
             this.imgCharacter.Visible = false;
+            this.imgCharacter.Click += new System.EventHandler(this.imgCharacter_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Enabled = false;
+            this.btnQuit.Location = new System.Drawing.Point(292, 124);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 4;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // MainForm
             // 
@@ -81,6 +94,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.imgCharacter);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.lblInstruction);
@@ -100,6 +114,7 @@
         private System.Windows.Forms.Label lblInstruction;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.PictureBox imgCharacter;
+        private System.Windows.Forms.Button btnQuit;
     }
 }
 
