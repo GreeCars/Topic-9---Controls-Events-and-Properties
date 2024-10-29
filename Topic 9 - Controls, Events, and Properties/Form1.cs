@@ -12,6 +12,8 @@ namespace Topic_9___Controls__Events__and_Properties
 {
     public partial class MainForm : Form
     {
+        Random generator = new Random();
+
         public MainForm()
         {
             InitializeComponent();
@@ -33,6 +35,45 @@ namespace Topic_9___Controls__Events__and_Properties
         private void imgCharacter_Click(object sender, EventArgs e)
         {
             imgCharacter.Visible = false;
+        }
+
+        private void btnRed_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
+        }
+
+        private void btnBlue_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Blue;
+        }
+
+        private void btnGreen_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Green;
+        }
+
+        private void btnYellow_Click(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Yellow;
+        }
+
+        private void lblInstruction_MouseEnter(object sender, EventArgs e)
+        {
+            lblInstruction.ForeColor = Color.Red;
+        }
+
+        private void lblInstruction_MouseLeave(object sender, EventArgs e)
+        {
+            lblInstruction.ForeColor= Color.Black;
+        }
+
+        private void btnRandomColor_Click(object sender, EventArgs e)
+        {
+            int max = 256; // 255 is the maximum value an RGB value can be
+            int r = generator.Next(max);
+            int g = generator.Next(max);
+            int b = generator.Next(max);
+            this.BackColor = Color.FromArgb(r, g, b);
         }
     }
 }
